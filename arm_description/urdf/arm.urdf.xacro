@@ -6,6 +6,13 @@
     <color rgba="1 0 0 1"/>
   </material>
 
+<!-- Used for fixing robot-->
+  <link name="world"/>
+  <joint name="base_link_joint" type="fixed">
+      <origin rpy="0.0 0.0 0.0" xyz="0 0 0"/>
+      <parent link="world"/>
+      <child link="base_link"/>
+  </joint>
 
   <link name="base_link">
     <visual>
