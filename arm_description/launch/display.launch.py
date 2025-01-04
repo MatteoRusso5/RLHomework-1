@@ -20,39 +20,39 @@ def generate_launch_description():
     declared_arguments = []
 
     declared_arguments.append(
-        DeclareLaunchArgument(
+        DeclareLaunchArgument( # to specify input arguments of the launch file
             "rviz_config_file", 
             default_value=PathJoinSubstitution(
                 [FindPackageShare("arm_description"), "config", "rviz", "arm.rviz"]
             ),
             description="RViz config file (absolute path) to use when launching rviz.",
         )
-    )
+    ) 
 
     # Percorso al file URDF
     urdf_file = os.path.join(
         get_package_share_directory('arm_description'), 
         'urdf', 
         'arm.urdf.xacro'
-    )
+    )    # to create the absolute path to the urdf file
 
     
-    robot_description_xacro = {"robot_description": Command(['xacro ', urdf_file])}
-
+    robot_description_xacro = {"robot_description": Command(['xacro ', urdf_file])} # Convert xacro to urdf inside a launch file and use robot_description as a key
+    
     joint_state_publisher_node = Node(
         package="joint_state_publisher_gui",
         executable="joint_state_publisher_gui",
 
-    )
+    ) # this node creates a GUI to manually control the joints state
    
     robot_state_publisher_node = Node(
-        package="robot_state_publisher",
+        package="robot_state_publisher",    
         executable="robot_state_publisher",
         output="both",
         parameters=[robot_description_xacro,
-                    {"use_sim_time": True},
+                    {"use_sim_time": True},    # Specifies that the node should use simulation time instead of real time.
             ],
-    )
+    )  # for calculating and publishing transformations (TF) of all the robot's links based on a URDF/XACRO file and joint states
 
 
     rviz_node = Node(
@@ -60,8 +60,8 @@ def generate_launch_description():
         executable="rviz2",
         name="rviz2",
         output="log",
-        arguments=["-d", LaunchConfiguration("rviz_config_file")],
-    )
+        arguments=["-d", LaunchConfiguration("rviz_config_file")],    # as specified above 
+    ) # the node to run rviz to visualize the sensor data (camera)
 
 
    
