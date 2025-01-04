@@ -44,7 +44,7 @@ private:
   // Funzione per pubblicare il comando sul topic /position_controller/commands
   void publishCommand()
   {
-    auto command_msg = std_msgs::msg::Float64MultiArray();
+    auto command_msg = std_msgs::msg::Float64MultiArray(); // auto to deduce the type from the contructor
     command_msg.data = {1.0, 1.0, 1.0, 1.0}; 
     RCLCPP_INFO(this->get_logger(), "Publishing command to position (1, 1, 1, 1)");
 
