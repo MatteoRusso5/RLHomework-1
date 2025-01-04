@@ -24,9 +24,6 @@ def generate_launch_description():
 
     urdf_file = os.path.join(urdf_path, "urdf", "arm.urdf.xacro")
 
-    with open(urdf_file, 'r') as infp:
-        link_desc = infp.read()
-
 
     robot_description_xacro = {"robot_description": Command(['xacro ', urdf_file])}
     
