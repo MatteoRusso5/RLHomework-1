@@ -31,6 +31,7 @@ def generate_launch_description():
         arguments=["position_controller", "--controller-manager", "/controller_manager"],  
         
     ) 
+    # --controller-manager is used to specify the name of the controller manager
 
 
     nodes_to_start = [
