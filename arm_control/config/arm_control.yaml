@@ -1,3 +1,4 @@
+# These controllers are recalled by arm_control.launch.py
 controller_manager:
   ros__parameters:
     update_rate: 225  # Hz
