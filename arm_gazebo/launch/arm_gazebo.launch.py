@@ -52,7 +52,7 @@ def generate_launch_description():
             '-r', '/camera:=/videocamera',
         ],
         output='screen'
-    )
+    ) # to enable the exchange of messages between ROS 2 and Gazebo
             
     
     return LaunchDescription([
