@@ -26,6 +26,6 @@ endif()
 install(
    DIRECTORY urdf config launch
    DESTINATION share/${PROJECT_NAME}
-)
+) # To specify the directories that will be copied from the source package to the install/share/<package_name> directory in the workspace.
 
 ament_package()
