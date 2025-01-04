@@ -21,8 +21,8 @@ public:
     command_publisher_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("/position_controller/commands", 10);
 
     // Subscriber per il topic joint_states
-    joint_state_subscriber_ = this->create_subscription<sensor_msgs::msg::JointState>(
-      "joint_states", 10, std::bind(&ArmControllerNode::jointStateCallback, this, _1));
+    joint_state_subscriber_ = this->create_subscription<sensor_msgs::msg::JointState>( // message_type, topic_name, queue_size
+      "joint_states", 10, std::bind(&ArmControllerNode::jointStateCallback, this, _1)); // _1 to take the message recevied as argument for the callback
 
     // Timer per inviare il comando una sola volta dopo l'inizio
     timer_ = this->create_wall_timer(
