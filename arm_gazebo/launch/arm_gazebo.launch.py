@@ -46,8 +46,8 @@ def generate_launch_description():
         package='ros_ign_bridge',
         executable='parameter_bridge',
         arguments=[
-            '/camera@sensor_msgs/msg/Image@gz.msgs.Image',
-            '/camera_info@sensor_msgs/msg/CameraInfo@gz.msgs.CameraInfo',
+            '/camera@sensor_msgs/msg/Image@gz.msgs.Image', # topic_name @ ROS_msg_type @ GZ_msg_type
+            '/camera_info@sensor_msgs/msg/CameraInfo@gz.msgs.CameraInfo', 
             '--ros-args',
             '-r', '/camera:=/videocamera',
         ],
