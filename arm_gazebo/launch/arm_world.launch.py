@@ -40,6 +40,7 @@ def generate_launch_description():
 
     declared_arguments.append(DeclareLaunchArgument('gz_args', default_value='-r -v 1 empty.sdf',
                               description='Arguments for gz_sim'),)
+# flag -r to start in play (not in pause)
     
     gazebo_ignition = IncludeLaunchDescription(
             PythonLaunchDescriptionSource(
