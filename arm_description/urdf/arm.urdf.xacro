@@ -422,6 +422,7 @@
       </visual>
   </link>
 
+# to enable the controllers in gazebo
   <gazebo>
     <plugin filename="ign_ros2_control-system" name="ign_ros2_control::IgnitionROS2ControlPlugin">
     <parameters>$(find arm_control)/config/arm_control.yaml</parameters>
