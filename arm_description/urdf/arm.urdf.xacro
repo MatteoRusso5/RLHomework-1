@@ -437,23 +437,11 @@
     <hardware>
     <plugin>ign_ros2_control/IgnitionSystem</plugin> 
     </hardware>
-
-    <xacro:joint_ros2_control name="base_1_2" initial_pos="0.0"/>   
-    <xacro:joint_ros2_control name="j0" initial_pos="0.0"/>   
-    <xacro:joint_ros2_control name="base_turn_rot_dyn2" initial_pos="0.0"/>   
-    <xacro:joint_ros2_control name="j1" initial_pos="0.0"/>   
-    <xacro:joint_ros2_control name="dyn2_f4" initial_pos="0.0"/>   
-    <xacro:joint_ros2_control name="d4_dyn3" initial_pos="0.0"/>   
-    <xacro:joint_ros2_control name="j2" initial_pos="0.0"/> 
-    <xacro:joint_ros2_control name="dyn3_f5" initial_pos="0.0"/>   
-    <xacro:joint_ros2_control name="f5_dyn4" initial_pos="0.0"/>   
+  
+    <xacro:joint_ros2_control name="j0" initial_pos="0.0"/>     
+    <xacro:joint_ros2_control name="j1" initial_pos="0.0"/>      
+    <xacro:joint_ros2_control name="j2" initial_pos="0.0"/>   
     <xacro:joint_ros2_control name="j3" initial_pos="0.0"/>   
-    <xacro:joint_ros2_control name="f5_wrist" initial_pos="0.0"/>   
-    <xacro:joint_ros2_control name="wrist_dyn5" initial_pos="0.0"/>   
-    <xacro:joint_ros2_control name="dyn5_dyn5_r" initial_pos="0.0"/>   
-    <xacro:joint_ros2_control name="wrist_rotate_dyn5" initial_pos="0.0"/> 
-    <xacro:joint_ros2_control name="crawer_base_crawer_left" initial_pos="0.0"/> 
-    <xacro:joint_ros2_control name="crawer_base_crawer_right" initial_pos="0.0"/> 
 
    
 
