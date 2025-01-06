@@ -422,7 +422,7 @@
       </visual>
   </link>
 
-# to enable the controllers in gazebo
+<!-- to enable the controllers in gazebo -->
   <gazebo>
     <plugin filename="ign_ros2_control-system" name="ign_ros2_control::IgnitionROS2ControlPlugin">
     <parameters>$(find arm_control)/config/arm_control.yaml</parameters>
@@ -430,11 +430,11 @@
     </plugin>
   </gazebo>
 
-# creation of the joints with the position interface
+<!-- creation of the joints with the position interface -->
   <xacro:include filename="$(find arm_description)/urdf/arm_hardware_interface.xacro"/>
   <ros2_control name="HardwareInterface_Ignition" type="system">
 
-    # to enable the hardware interface
+    <!-- to enable the hardware interface -->
     <hardware>
     <plugin>ign_ros2_control/IgnitionSystem</plugin> 
     </hardware>
