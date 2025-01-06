@@ -3,7 +3,7 @@
 
 
   <xacro:macro name="camera_ros2_control">
-# plugin for the sensors (our case camera)
+ <!-- plugin for the sensors (our case camera) -->
     <gazebo>
       <plugin filename="gz-sim-sensors-system"
         name="gz::sim::systems::Sensors">
